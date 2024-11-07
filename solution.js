@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_11();
+  exercise_13();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -290,17 +290,25 @@ export function exercise_12() {
     
     Delete from Map:
 		 
-		Copy the Map creation and key-value pair setting code from exercise_10 and paste it below.
-		Delete the key "age" and log the map.
+		Copy the Map creation and key-value pair setting code from exercise_11 and 
+    paste it below
+    Log the Map and it's size to the console
+
+		Then, use the Map's delete method to delete the entry with the key "age"
+    Log the Map and it's size to the console again
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let userMap = new Map();
-  userMap.set("name", "John");
-  userMap.set("age", 25);
-  userMap.set("isMember", true);
+  let userMap = new Map([
+    ["name", "John"],
+    ["age", 25],
+    ["job", "Software Developer"],
+  ]);
+  console.log(userMap);
+  console.log("Size:", userMap.size);
   userMap.delete("age");
   console.log(userMap);
+  console.log("Size:", userMap.size);
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -309,18 +317,72 @@ export function exercise_13() {
    
     Exercise 13
     
-    Map Size: 
+    Sets: 
 		
-		Copy the Map creation and key-value pair setting code from exercise_10 and paste it below.
-		Log the size of the map.
-  
+		Create a new Set with three unique values
+    Log the Set and its size to the console
+
+    Then add 3 more unique items to the Set
+
+    Log the Set and its size to the console
+
+    Then, add an item to the Set that is already in it.
+    Log the Set and its size to the console and notice that it 
+    didn't add the duplicate
+
+    Then use the .has() method to check if the set has 3 separate items
+    
+    Write a condition to store if the Set has all 3 items.
+    Then write an if-else statement that prints "Has all three" if it does and
+    "Does not contain all three" if it doesn't.
+
+    Finally, delete three items from the Set and log the Set and it's size to
+    the console.
+
   */
   // CODE IN THE OPEN LINES BELOW
-  let userMap = new Map();
-  userMap.set("name", "John");
-  userMap.set("age", 25);
-  userMap.set("isMember", true);
-  console.log(userMap.size);
+  let uniqueNumbers = new Set([1, 2, 3]);
+  console.log("Original:", uniqueNumbers, "\nSize:", uniqueNumbers.size);
+  uniqueNumbers.add(4);
+  uniqueNumbers.add(5);
+  uniqueNumbers.add(6);
+  console.log(
+    "New Members Added:",
+    uniqueNumbers,
+    "\nSize:",
+    uniqueNumbers.size
+  );
+
+  uniqueNumbers.add(2);
+  console.log(
+    "Set won't add item already in Set:",
+    uniqueNumbers,
+    "\nSize:",
+    uniqueNumbers.size
+  );
+
+  const has1 = uniqueNumbers.has(1);
+  const has5 = uniqueNumbers.has(5);
+  const has15 = uniqueNumbers.has(15);
+
+  const hasAllThree = has1 && has5 && has15;
+
+  if (hasAllThree) {
+    console.log("Has all three");
+  } else {
+    console.log("Does not contain all three");
+  }
+
+  uniqueNumbers.delete(4);
+  uniqueNumbers.delete(5);
+  uniqueNumbers.delete(2);
+
+  console.log(
+    "Set after deletions",
+    uniqueNumbers,
+    "\nSize:",
+    uniqueNumbers.size
+  );
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -328,109 +390,6 @@ export function exercise_14() {
   /* 
    
     Exercise 14
-    
-    Sets: 
-		
-		Create a set with three unique values and log the set.
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let uniqueNumbers = new Set();
-  uniqueNumbers.add(1);
-  uniqueNumbers.add(2);
-  uniqueNumbers.add(3);
-  console.log(uniqueNumbers);
-  // CODE IN THE OPEN LINES ABOVE
-}
-
-export function exercise_15() {
-  /* 
-   
-    Exercise 15
-    
-		Add to Set: 
-		Copy the Set creation and value adding code from exercise_14 and paste it below.
-		Try to add a duplicate value and log the set.
-    
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let uniqueNumbers = new Set();
-  uniqueNumbers.add(1);
-  uniqueNumbers.add(2);
-  uniqueNumbers.add(3);
-  uniqueNumbers.add(2);
-  console.log(uniqueNumbers); // Should still have three values
-  // CODE IN THE OPEN LINES ABOVE
-}
-
-export function exercise_16() {
-  /* 
-   
-    Exercise 16
-    
-    Set Size: 
-		
-		Copy the Set creation and value adding code from exercise_14 and paste it below.
-		Log the size of the set.
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let uniqueNumbers = new Set();
-  uniqueNumbers.add(1);
-  uniqueNumbers.add(2);
-  uniqueNumbers.add(3);
-
-  uniqueNumbers.add(2);
-  console.log(uniqueNumbers.size);
-  // CODE IN THE OPEN LINES ABOVE
-}
-
-export function exercise_17() {
-  /* 
-   
-    Exercise 17
-    
-		Check Set: 
-
-		Copy the Set creation and value adding code from exercise_14 and paste it below.
-		Use has() to check if the set contains the number 1.
-
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let uniqueNumbers = new Set();
-  uniqueNumbers.add(1);
-  uniqueNumbers.add(2);
-  uniqueNumbers.add(3);
-  console.log(uniqueNumbers.has(1));
-  // CODE IN THE OPEN LINES ABOVE
-}
-
-export function exercise_18() {
-  /* 
-   
-    Exercise 18
-
-		Delete from Set: 
-    
-		Copy the Set creation and value adding code from exercise_14 and paste it below.
-		Remove a value from the set and log it.
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let uniqueNumbers = new Set();
-  uniqueNumbers.add(1);
-  uniqueNumbers.add(2);
-  uniqueNumbers.add(3);
-  uniqueNumbers.delete(3);
-  console.log(uniqueNumbers);
-  // CODE IN THE OPEN LINES ABOVE
-}
-
-export function exercise_19() {
-  /* 
-   
-    Exercise 19
     
 		While Loop: 
 		
@@ -446,10 +405,10 @@ export function exercise_19() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_20() {
+export function exercise_15() {
   /* 
    
-    Exercise 20
+    Exercise 15
     
     Do-While Loop: 
 		
@@ -465,10 +424,10 @@ export function exercise_20() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_21() {
+export function exercise_16() {
   /* 
    
-    Exercise 21
+    Exercise 16
     
     For Loop: 
 
@@ -484,10 +443,10 @@ export function exercise_21() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_22() {
+export function exercise_17() {
   /* 
    
-    Exercise 22
+    Exercise 17
     
 		For-Of Loop: 
 		
@@ -502,10 +461,10 @@ export function exercise_22() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_23() {
+export function exercise_18() {
   /* 
    
-    Exercise 23
+    Exercise 18
     
     For-In Loop: 
 		
@@ -520,10 +479,10 @@ export function exercise_23() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_24() {
+export function exercise_19() {
   /* 
    
-    Exercise 24
+    Exercise 19
     
     Break and Continue: 
 		
