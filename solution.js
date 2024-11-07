@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_01();
+  exercise_11();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -31,8 +31,9 @@ export function exercise_01() {
     
 		Arrays: 
 		
-		Create an array of five numbers and log the array.
-		Then, Log the length of the numbers array.
+		1. Create a variable assigned to an array of five numbers and 
+       log the array to the console.
+		2. Then, Log the length of this array.
     
   
   */
@@ -50,8 +51,8 @@ export function exercise_02() {
 
 		Access Array Elements: 
     
-    Create an array of five numbers.
-		Log the first and last elements of the numbers array.
+    1. Create a variable assigned to an array of five numbers.
+		2. Log the first and last elements of the numbers array to the console.
   
   */
   // CODE IN THE OPEN LINES BELOW
@@ -68,18 +69,18 @@ export function exercise_03() {
     
     Add to Array: 
 		
-		Create an empty array
+		Create a variable assigned to an empty array.
 		Use push() to add a number to the end of the array five times.
 		Then, log the array
   
   */
   // CODE IN THE OPEN LINES BELOW
   const arr = [];
-  arr.push(10);
-  arr.push(20);
-  arr.push(40);
-  arr.push(50);
-  arr.push(60);
+  arr.push(1);
+  arr.push(2);
+  arr.push(4);
+  arr.push(8);
+  arr.push(16);
   console.log(arr);
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -91,14 +92,14 @@ export function exercise_04() {
 
     Add to Beginning: 
 		
-		Copy the array defined in exercise_02 and paste it below. 
+		Create an array of 5 strings. 
 		Use unshift() to add a number to the beginning of the array.
     
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let numbers = [10, 20, 30, 40, 50];
-  numbers.unshift(5);
+  let numbers = ["Hey", "There", "Student", "Lets", "Go!"];
+  numbers.unshift(100);
   console.log(numbers);
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -110,14 +111,15 @@ export function exercise_05() {
     
     Remove from Array: 
 
-		Copy the array defined in exercise_02 and paste it below. 
+		Create a variable assigned to an array of 5 strings. 
 		
-		Use pop() to remove the last item and log the modified array.
+		Use pop() to remove the last item and log it to the console
+    Then log the array
   
   */
   // CODE IN THE OPEN LINES BELOW
   let numbers = [10, 20, 30, 40, 50];
-  numbers.pop();
+  console.log(numbers.pop());
   console.log(numbers);
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -129,13 +131,14 @@ export function exercise_06() {
     
     Remove from Beginning: 
 		
-		Copy the array defined in exercise_02 and paste it below.
-		Use shift() to remove the first item and log the modified array.
+		Create a variable assigned to an array of 5 numbers.
+		Use shift() to remove the first item and log it to the console.
+    Then, log the array to the console.
   
   */
   // CODE IN THE OPEN LINES BELOW
   let numbers = [10, 20, 30, 40, 50];
-  numbers.shift();
+  console.log(numbers.shift());
   console.log(numbers);
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -145,13 +148,20 @@ export function exercise_07() {
    
     Exercise 7
     
-    Copy the array defined in exercise_02 and paste it below.
-		Check if the number 30 is in the array and log the result.
+    Create a variable assigned an array containing the numbers from 1 to 10.
+		Check if the number 7 is in the array.
+    If it is log the message "Item is in the array!" to the console
+    Otherwise log the message "Item not present in the array".
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let numbers = [10, 20, 30, 40, 50];
-  console.log(numbers.includes(30));
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const inArray = numbers.includes(7);
+  if (inArray) {
+    console.log("Item is in the array!");
+  } else {
+    console.log("Item not present in the array");
+  }
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -162,13 +172,22 @@ export function exercise_08() {
     
     Array Index: 
 		
-		Copy the array defined in exercise_02 and paste it below.
-		Use indexOf() to find the position of 40 in the array.
-  
+		Copy the array from exercise_08 below.
+		Use indexOf() to find the position of 4 in the array.
+    Then, using bracket notation on the `numbers` array, 
+    print the element before and the element after 4 in the array
+
+    WARNING: Don't just manually type out and print 3 and 5 to the console.
+    Use bracket notation on the array to select the element before
+    and the element after the indexOf 4 in the array, and print THOSE to the 
+    console.
+
   */
   // CODE IN THE OPEN LINES BELOW
-  let numbers = [10, 20, 30, 40, 50];
-  console.log(numbers.indexOf(40));
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const i = numbers.indexOf(4);
+  console.log("before:", numbers[i - 1]);
+  console.log("after:", numbers[i + 1]);
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -179,8 +198,9 @@ export function exercise_09() {
     
     Splice Array: 
 		
-		Copy the array defined in exercise_02 and paste it below.
+		Copy the array from exercise_08 and paste it below.
 		Use splice() to remove the second item in the array.
+    Then print the array to the console
   
   */
   // CODE IN THE OPEN LINES BELOW
@@ -197,7 +217,17 @@ export function exercise_10() {
 
     Maps: 
 		
-		Create a map with three key-value pairs and log the map.
+		Create a new Map, and set values for these 3 keys:
+    - name
+    - age
+    - job
+
+    Then log this Map to the console
+
+    Then create an object literal with these property/value pairs
+    and log it to the console.
+
+    Notice the difference on how it appears when logged to the console.
     
   
   */
@@ -205,8 +235,14 @@ export function exercise_10() {
   let userMap = new Map();
   userMap.set("name", "John");
   userMap.set("age", 25);
-  userMap.set("isMember", true);
+  userMap.set("job", "Software Developer");
   console.log(userMap);
+
+  console.log({
+    name: "John",
+    age: 25,
+    job: "Software Developer",
+  });
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -217,16 +253,33 @@ export function exercise_11() {
     
     Get from Map: 
 		
-		Copy the Map creation and key-value pair setting code from exercise_10 and paste it below.
-		Retrieve and log the value associated with the key "name".
+		Copy the Map creation code from exercise_10 and paste it below
+		Use the .get() method on the Map to retrieve the value for the "name" key.
+    Then, insert it into a string literal with the message:
+
+    `This person's name is [nameValue]`
+
+    Then log this to the console
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let userMap = new Map();
-  userMap.set("name", "John");
-  userMap.set("age", 25);
-  userMap.set("isMember", true);
-  console.log(userMap.get("name"));
+
+  /*
+   Answer info:
+   This is how you instantiate a new map with values
+   Notice, you pass it an array of multiple sub-arrays, each containing two
+   elements each:
+   - The first element the name of the key
+   - The second element, the value of that key
+  */
+  let userMap = new Map([
+    ["name", "John"],
+    ["age", 25],
+    ["job", "Software Developer"],
+  ]);
+  const name = userMap.get("name");
+  const msg = `This person's name is ${name}`;
+  console.log(msg);
   // CODE IN THE OPEN LINES ABOVE
 }
 
