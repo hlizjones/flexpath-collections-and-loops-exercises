@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_16();
+  exercise_17();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -467,12 +467,12 @@ export function exercise_17() {
   const purchasedItems_November_5_2024 = [
     { item: "toilet paper", price: 17.99, type: "toiletry" },
     { item: "1lb ground beef", price: 6.99, type: "food" },
-    { item: "Tooth brush 3 pack", price: 10, type: "toiletry" },
-    { item: "Iphone Charging Cable", price: 12, type: "electronics" },
-    { item: "Chips", price: 3.5, type: "food" },
+    { item: "Tooth brush 3 pack", price: 7.99, type: "toiletry" },
+    { item: "Iphone Charging Cable", price: 12.49, type: "electronics" },
+    { item: "Chips", price: 3.49, type: "food" },
     { item: "Xbox Gift Card", price: 25, type: "gift card" },
     { item: "12 pack Diet Coke", price: 9.99, type: "food" },
-    { item: "Xbox Gift Card", price: 25, type: "gift card" },
+    { item: "Visa Gift Card", price: 160, type: "gift card" },
     { item: "Vizio 50 inch tv", price: 299, type: "electronics" },
   ];
   // DONT edit the code above
@@ -512,11 +512,13 @@ export function exercise_17() {
   */
   // CODE IN THE OPEN LINES BELOW
 
+  const itemNames = [];
   const uniqueTypes = new Set();
   const sumPricePerType = {};
 
   for (let i = 0; i < purchasedItems_November_5_2024.length; i++) {
-    console.log("Item:", purchasedItems_November_5_2024[i]["item"]);
+    const itemName = purchasedItems_November_5_2024[i]["item"];
+    itemNames.push(itemName);
     const type = purchasedItems_November_5_2024[i]["type"];
     const price = purchasedItems_November_5_2024[i]["price"];
     uniqueTypes.add(type);
@@ -524,16 +526,26 @@ export function exercise_17() {
       sumPricePerType[type] = 0;
     }
     const newSum = price + sumPricePerType[type];
-    sumPricePerType[type] = newSum;
+    sumPricePerType[type] = Math.round(newSum, 2);
   }
 
+  console.log("Item Names:");
+  for (let type of uniqueTypes) {
+    console.log("Item:", type);
+  }
+  console.log("--------------");
+
+  console.log("Unique item types:");
   for (let type of uniqueTypes) {
     console.log("Unique Type:", type);
   }
+  console.log("--------------");
 
+  console.log("Total sum for each type");
   for (let key in sumPricePerType) {
     console.log(`Sum for ${key} items: ${sumPricePerType[key]}`);
   }
+  console.log("--------------");
 
   // CODE IN THE OPEN LINES ABOVE
 }
