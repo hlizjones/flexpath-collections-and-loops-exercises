@@ -1,13 +1,27 @@
 import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  // To run the code you write for each exercise, change the text below to match the name
-  // of the exercise.
-  // For Example:
-  // If I want to run exercise_05 below, I would change the text from "exercise_01" to
-  // "exercise_05", save this file, and then when I run this file with `node exercise.js`
-  // the code for exercise_05 will run
+  /*
+
+    To run the code you write for each exercise, change the `exercise_01()` 
+    code below to match the EXACT name
+    of the exercise, as it is written in the line `function exercise_xx`.
+    
+     For Example:
+
+     If I want to run exercise_05 below, 
+     I would change the code below from "exercise_01()" to
+     "exercise_05()", save this file. 
+		 
+		 Then, when I run this file by running `node exercise.js`
+     in the VS Code terminal while inside this folder, your code 
+     for exercise_05 will run.
+
+  */
+
+  // Modify the line of code BELOW to run a different exercise
   exercise_01();
+  // Modify the line of code ABOVE to run a different exercise
 }
 
 export function exercise_01() {
@@ -26,7 +40,7 @@ export function exercise_01() {
   let numbers = [10, 20, 30, 40, 50];
   console.log(numbers);
   console.log(numbers.length);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_02() {
@@ -44,7 +58,7 @@ export function exercise_02() {
   let numbers = [10, 20, 30, 40, 50];
   console.log(numbers[0]); // First element
   console.log(numbers[numbers.length - 1]); // Last element
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_03() {
@@ -67,7 +81,7 @@ export function exercise_03() {
   arr.push(50);
   arr.push(60);
   console.log(arr);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_04() {
@@ -86,7 +100,7 @@ export function exercise_04() {
   let numbers = [10, 20, 30, 40, 50];
   numbers.unshift(5);
   console.log(numbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_05() {
@@ -105,7 +119,7 @@ export function exercise_05() {
   let numbers = [10, 20, 30, 40, 50];
   numbers.pop();
   console.log(numbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_06() {
@@ -123,7 +137,7 @@ export function exercise_06() {
   let numbers = [10, 20, 30, 40, 50];
   numbers.shift();
   console.log(numbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_07() {
@@ -138,7 +152,7 @@ export function exercise_07() {
   // CODE IN THE OPEN LINES BELOW
   let numbers = [10, 20, 30, 40, 50];
   console.log(numbers.includes(30));
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_08() {
@@ -155,7 +169,7 @@ export function exercise_08() {
   // CODE IN THE OPEN LINES BELOW
   let numbers = [10, 20, 30, 40, 50];
   console.log(numbers.indexOf(40));
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_09() {
@@ -173,7 +187,7 @@ export function exercise_09() {
   let numbers = [10, 20, 30, 40, 50];
   numbers.splice(1, 1);
   console.log(numbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_10() {
@@ -193,7 +207,7 @@ export function exercise_10() {
   userMap.set("age", 25);
   userMap.set("isMember", true);
   console.log(userMap);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_11() {
@@ -213,7 +227,7 @@ export function exercise_11() {
   userMap.set("age", 25);
   userMap.set("isMember", true);
   console.log(userMap.get("name"));
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_12() {
@@ -234,7 +248,7 @@ export function exercise_12() {
   userMap.set("isMember", true);
   userMap.delete("age");
   console.log(userMap);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_13() {
@@ -254,7 +268,7 @@ export function exercise_13() {
   userMap.set("age", 25);
   userMap.set("isMember", true);
   console.log(userMap.size);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_14() {
@@ -273,7 +287,7 @@ export function exercise_14() {
   uniqueNumbers.add(2);
   uniqueNumbers.add(3);
   console.log(uniqueNumbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_15() {
@@ -294,7 +308,7 @@ export function exercise_15() {
   uniqueNumbers.add(3);
   uniqueNumbers.add(2);
   console.log(uniqueNumbers); // Should still have three values
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_16() {
@@ -316,7 +330,7 @@ export function exercise_16() {
 
   uniqueNumbers.add(2);
   console.log(uniqueNumbers.size);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_17() {
@@ -336,7 +350,7 @@ export function exercise_17() {
   uniqueNumbers.add(2);
   uniqueNumbers.add(3);
   console.log(uniqueNumbers.has(1));
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_18() {
@@ -357,7 +371,7 @@ export function exercise_18() {
   uniqueNumbers.add(3);
   uniqueNumbers.delete(3);
   console.log(uniqueNumbers);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_19() {
@@ -376,7 +390,7 @@ export function exercise_19() {
     console.log(i);
     i++;
   }
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_20() {
@@ -395,7 +409,7 @@ export function exercise_20() {
     console.log(j);
     j--;
   } while (j > 0);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_21() {
@@ -414,7 +428,7 @@ export function exercise_21() {
   for (let k = 0; k < numbers.length; k++) {
     console.log(numbers[k]);
   }
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_22() {
@@ -432,7 +446,7 @@ export function exercise_22() {
   for (let num of numbers) {
     console.log(num);
   }
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_23() {
@@ -450,7 +464,7 @@ export function exercise_23() {
   for (let key in person) {
     console.log(`${key}: ${person[key]}`);
   }
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_24() {
@@ -469,5 +483,5 @@ export function exercise_24() {
     if (x === 8) break;
     console.log(x);
   }
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
