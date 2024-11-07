@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_13();
+  exercise_16();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -393,7 +393,7 @@ export function exercise_14() {
     
 		While Loop: 
 		
-		Use a while loop to log numbers from 1 to 5.
+		Use a while loop and the increment operator to log numbers from 1 to 5.
   
   */
   // CODE IN THE OPEN LINES BELOW
@@ -412,15 +412,26 @@ export function exercise_15() {
     
     Do-While Loop: 
 		
-		Use a do-while loop to log numbers from 5 to 1.
+		Use a do-while loop and the decrement operator to log numbers from 28 to 1.
+
+    Then add a conditional inside the loop to only print the number if it is 
+    divisible by 7 OR 4
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let j = 5;
+  let j = 28;
   do {
     console.log(j);
     j--;
   } while (j > 0);
+
+  let x = 28;
+  do {
+    if (x % 7 === 0 || x % 4 === 0) {
+      console.log(x);
+    }
+    x--;
+  } while (x > 0);
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -429,71 +440,100 @@ export function exercise_16() {
    
     Exercise 16
     
-    For Loop: 
+    Break and Continue: 
+		
+    Create a for loop that iterates from 1 to 10 and logs 
+    each number to the console.
 
-		Copy the array defined in exercise_02 and paste it below.
-		Use a for loop to iterate over the numbers array and log each item.
+    Then, using the `continue` and `break` keywords, skip the loop iteration
+    each time the number is odd, and then break the loop once it reaches 8.
   
   */
   // CODE IN THE OPEN LINES BELOW
-  let numbers = [10, 20, 30, 40, 50];
-  for (let k = 0; k < numbers.length; k++) {
-    console.log(numbers[k]);
+  for (let x = 1; x <= 10; x++) {
+    console.log(x);
+  }
+
+  for (let x = 1; x <= 10; x++) {
+    if (x % 2 === 1) continue;
+    if (x === 8) break;
+    console.log(x);
   }
   // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_17() {
+  // DONT edit the code below
+  const purchasedItems_November_5_2024 = [
+    { item: "toilet paper", price: 17.99, type: "toiletry" },
+    { item: "1lb ground beef", price: 6.99, type: "food" },
+    { item: "Tooth brush 3 pack", price: 10, type: "toiletry" },
+    { item: "Iphone Charging Cable", price: 12, type: "electronics" },
+    { item: "Chips", price: 3.5, type: "food" },
+    { item: "Xbox Gift Card", price: 25, type: "gift card" },
+    { item: "12 pack Diet Coke", price: 9.99, type: "food" },
+    { item: "Xbox Gift Card", price: 25, type: "gift card" },
+    { item: "Vizio 50 inch tv", price: 299, type: "electronics" },
+  ];
+  // DONT edit the code above
   /* 
    
     Exercise 17
     
-		For-Of Loop: 
-		
-    Copy the array defined in exercise_02 and paste it below.
-		Use a for-of loop to iterate over the numbers array and log each item.
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  for (let num of numbers) {
-    console.log(num);
-  }
-  // CODE IN THE OPEN LINES ABOVE
-}
+    For Loop: 
 
-export function exercise_18() {
-  /* 
-   
-    Exercise 18
-    
-    For-In Loop: 
-		
-		Create an object and use a for-in loop to log each key and value.
-  
-  */
-  // CODE IN THE OPEN LINES BELOW
-  let person = { name: "Alice", age: 30, city: "Paris" };
-  for (let key in person) {
-    console.log(`${key}: ${person[key]}`);
-  }
-  // CODE IN THE OPEN LINES ABOVE
-}
+		We have defined an array above named `purchasedItems_November_5_2024`.
 
-export function exercise_19() {
-  /* 
-   
-    Exercise 19
+    It contains objects that report on different properties of items bought 
+    by a customer at a supermarket.
+
+    Using a basic for loop, iterate through all elements in the array and log
+    the `item` property of each object to the console. There are multiple ways 
+    to accomplish this based on what we've learned.
+
+    Then, create a new variable above the for loop named `itemTypes` 
+    that stores a new Set.
+    Update the code inside of your for loop to add an elements `type` property
+    to the Set on each iteration
+
+    Then, write a for-of loop to log all elements of the Set to the console.
+    This allows us to see all the unique types of items that the customer had 
+    in their purchasedItems
+
+    Then, create a variable named `sumPricePerType` that stores 
+    an empty Object Literal.
     
-    Break and Continue: 
-		
-		Use a loop to log numbers from 1 to 10, skipping 5 and stopping at 8.
+    Add a new line within the for loop that checks if the current elements
+    'type' is a property in `sumPricePerType`. If it isn't, add the 'type' 
+    value to `sumPricePerType` as a new property with a value of 0. 
+
+    
   
   */
   // CODE IN THE OPEN LINES BELOW
-  for (let x = 1; x <= 10; x++) {
-    if (x === 5) continue;
-    if (x === 8) break;
-    console.log(x);
+
+  const uniqueTypes = new Set();
+  const sumPricePerType = {};
+
+  for (let i = 0; i < purchasedItems_November_5_2024.length; i++) {
+    console.log("Item:", purchasedItems_November_5_2024[i]["item"]);
+    const type = purchasedItems_November_5_2024[i]["type"];
+    const price = purchasedItems_November_5_2024[i]["price"];
+    uniqueTypes.add(type);
+    if (!sumPricePerType.hasOwnProperty(type)) {
+      sumPricePerType[type] = 0;
+    }
+    const newSum = price + sumPricePerType[type];
+    sumPricePerType[type] = newSum;
   }
+
+  for (let type of uniqueTypes) {
+    console.log("Unique Type:", type);
+  }
+
+  for (let key in sumPricePerType) {
+    console.log(`Sum for ${key} items: ${sumPricePerType[key]}`);
+  }
+
   // CODE IN THE OPEN LINES ABOVE
 }
