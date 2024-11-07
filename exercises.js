@@ -24,7 +24,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   // Modify the line of code ABOVE to run a different exercise
 }
 
-export function exercise_01() {
+function exercise_01() {
   /* 
    
     Exercise 1
@@ -44,7 +44,7 @@ export function exercise_01() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_02() {
+function exercise_02() {
   /* 
    
     Exercise 2
@@ -62,7 +62,7 @@ export function exercise_02() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_03() {
+function exercise_03() {
   /* 
    
     Exercise 3
@@ -81,7 +81,7 @@ export function exercise_03() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_04() {
+function exercise_04() {
   /* 
    
     Exercise 4
@@ -100,7 +100,7 @@ export function exercise_04() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_05() {
+function exercise_05() {
   /* 
    
     Exercise 5
@@ -120,7 +120,7 @@ export function exercise_05() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_06() {
+function exercise_06() {
   /* 
    
     Exercise 6
@@ -139,7 +139,7 @@ export function exercise_06() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_07() {
+function exercise_07() {
   /* 
    
     Exercise 7
@@ -157,7 +157,7 @@ export function exercise_07() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_08() {
+function exercise_08() {
   /* 
    
     Exercise 8
@@ -182,7 +182,7 @@ export function exercise_08() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_09() {
+function exercise_09() {
   /* 
    
     Exercise 9
@@ -201,7 +201,7 @@ export function exercise_09() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_10() {
+function exercise_10() {
   /* 
    
     Exercise 10
@@ -229,7 +229,7 @@ export function exercise_10() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_11() {
+function exercise_11() {
   /* 
    
     Exercise 11
@@ -261,7 +261,7 @@ export function exercise_11() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_12() {
+function exercise_12() {
   /* 
    
     Exercise 12
@@ -283,7 +283,7 @@ export function exercise_12() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_13() {
+function exercise_13() {
   /* 
    
     Exercise 13
@@ -318,7 +318,7 @@ export function exercise_13() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_14() {
+function exercise_14() {
   /* 
    
     Exercise 14
@@ -335,7 +335,7 @@ export function exercise_14() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_15() {
+function exercise_15() {
   /* 
    
     Exercise 15
@@ -355,7 +355,7 @@ export function exercise_15() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_16() {
+function exercise_16() {
   /* 
    
     Exercise 16
@@ -376,7 +376,7 @@ export function exercise_16() {
   // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_17() {
+function exercise_17() {
   // DONT edit the code below
   const checkoutItems = [
     { item: "toilet paper", price: 17.99, type: "toiletry" },
