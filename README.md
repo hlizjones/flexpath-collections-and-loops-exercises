@@ -22,7 +22,7 @@ collections and loops in JavaScript.
    on line 20 of the file. 
    ![To run a different exercise, change this line](gettingStartedFiles/whereToEditToRunExercise.png)
 5. After changing that line, make sure to SAVE the file before running it.
-6. To run your code in exercises.js, you will update line 20 to run the exercise code
+6. To run your code in exercises.js, you will update line 23 to run the exercise code
    you want to run and save the file. THEN, open a Terminal window in VS Code 
    by going to your toolbar at the top of the page and selecting 
    "Terminal" -> "New Terminal"
