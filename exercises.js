@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_01();
+  exercise_17();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -39,7 +39,9 @@ function exercise_01() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let array = [1,2,3,4,5];
+  console.log(`Array: ${array} Length: ${array.length}`);
+  console.log(array);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -57,7 +59,14 @@ function exercise_02() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  // My attempt
+  let array = [1,2,3,4,5];
+  console.log(`First Number: ${array[0]} Last Number: ${array[4]}`);
+
+  // Solution to compare
+  let numbers = [10, 20, 30, 40, 50];
+  console.log(numbers[0]); // First element
+  console.log(numbers[numbers.length - 1]); // Last element
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -76,7 +85,10 @@ function exercise_03() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let array = [];
+  array.push(1,2,3,4,5);
+  console.log(array);
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -95,7 +107,9 @@ function exercise_04() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let arr = ["Hannah", "Holly", "Apple", "Angel", "Crook"];
+  arr.unshift(5);
+  console.log(arr);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -115,7 +129,10 @@ function exercise_05() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let arr = ["Bop It", "Twist It", "Pull It", "Spin It", "Shake It"];
+  let removed = arr.pop();
+  console.log(`Removed Item: ${removed} Array: ${arr}`);
+  console.log(arr);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -134,7 +151,10 @@ function exercise_06() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let arr =[1,2,3,4,5];
+  let removed = arr.shift();
+  console.log(`Removed Item: ${removed} Array: ${arr}`);
+  console.log(arr);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -152,7 +172,12 @@ function exercise_07() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let arr = [1,2,3,4,5,6,7,8,9,10];
+  if (arr.includes(7)) {
+    console.log("Item is in the array!");
+  } else {
+    console.log("Item is not present in the array")
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -177,7 +202,17 @@ function exercise_08() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  // My attempt
+  let arr = [1,2,3,4,5,6,7,8,9,10];
+  console.log(arr.indexOf(4));
+  console.log(`Three: ${arr[2]} Five: ${arr[4]}`);
+
+  // Solution to compare
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const i = numbers.indexOf(4);
+  console.log("before:", numbers[i - 1]);
+  console.log("after:", numbers[i + 1]);
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -196,7 +231,10 @@ function exercise_09() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let arr = [1,2,3,4,5,6,7,8,9,10];
+  arr.splice(1, 1);
+  console.log(arr);
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -224,7 +262,25 @@ function exercise_10() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let map1 = new Map();
+  map1.set ("name", "Hannah");
+  map1.set("age", 26);
+  map1.set("job", "student");
+  console.log(map1);
+
+  let map2 = new Map([
+    ["name", "Hannah"],
+    ["age", 26],
+    ["job", "student"],
+  ]);
+  console.log(map2);
+
+  let obj1 = { name: "Hannah", age: "26", job: "student"};
+  console.log(obj1);
+
+  let map3 = new Map(Object.entries(obj1));
+  console.log(map3);
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -256,7 +312,13 @@ function exercise_11() {
    - The second element, the value of that key
   */
 
-  const placeholder = "Delete this line and code in this space";
+   let map1 = new Map();
+   map1.set ("name", "Hannah");
+   map1.set("age", 26);
+   map1.set("job", "student");
+   console.log(map1);
+
+   console.log(`This person's name is ${map1.get("name")}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -278,7 +340,17 @@ function exercise_12() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let map1 = new Map();
+   map1.set ("name", "Hannah");
+   map1.set("age", 26);
+   map1.set("job", "student");
+   console.log(map1);
+   console.log(map1.size);
+
+   map1.delete("age");
+   console.log(map1);
+   console.log(map1.size);
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -313,7 +385,36 @@ function exercise_13() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let set = new Set(["Hannah", "Holly", "Crook"]);
+  console.log(`Set: ${set} Set Size: ${set.size}`);
+  console.log(set);
+  console.log(set.size);
+
+  set.add("Apple");
+  set.add("Angel");
+  set.add("Parents");
+  console.log(set);
+  console.log(set.size);
+
+  set.add("Parents");
+  console.log(set);
+  console.log(set.size);
+
+  console.log(`Set includes Hannah: ${set.has("Hannah")}`);
+  console.log(`Set includes Holly: ${set.has("Holly")}`);
+  console.log(`Set includes Parents: ${set.has("Parents")}`);
+
+  if (set.has("Hannah") && set.has("Holly") && set.has("Parents")) {
+    console.log("Has all three");
+  } else {
+    console.log("Does not contain all three");
+  }
+
+  set.delete("Hannah");
+  set.delete("Holly");
+  set.delete("Parents");
+  console.log(set);
+  console.log(set.size);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -330,7 +431,11 @@ function exercise_14() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let i = 0
+  while(i<=5) {
+    console.log(i);
+    i++;
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -350,7 +455,22 @@ function exercise_15() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let i = 28
+  do {
+    console.log(i);
+    i--;
+  } while (i > 0);
+
+  console.log("---------------");
+
+
+  let n = 28
+  do {
+    if (n%7 === 0 || n%4 === 0) {
+      console.log(n);
+  }
+    n--;
+} while(n > 0);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -371,7 +491,34 @@ function exercise_16() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  // My attempt
+
+  for( let i=1; i<=10; i++) {
+    console.log(i);
+  }
+
+  console.log("------------------");
+
+  for( let i=1; i<=10; i++) {
+    if(i%2 !== 0) {
+      continue;
+  } if (i===8) {
+    break
+  } else {
+    console.log(i);
+  }}
+
+  // Solution to compare
+
+  for (let x = 1; x <= 10; x++) {
+    console.log(x);
+  }
+
+  for (let x = 1; x <= 10; x++) {
+    if (x % 2 === 1) continue;
+    if (x === 8) break;
+    console.log(x);
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -496,7 +643,9 @@ function exercise_17() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  for (let i = 0; i < checkoutItems.length; i++) {
+    console.log(i);
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
