@@ -643,9 +643,41 @@ function exercise_17() {
   */
   // CODE IN THE OPEN LINES BELOW
 
+  console.log(`Items in Checkout Cart`);
+  let itemNames = [];
+  let itemTypes = new Set();
+  let sumPricePerType = {};
+  let totalSum = 0
   for (let i = 0; i < checkoutItems.length; i++) {
-    console.log(i);
+    let item = checkoutItems[i].item;
+    itemNames.push(item);
+    let type = checkoutItems[i].type;
+    itemTypes.add(type);
+    let price = checkoutItems[i].price;
+    if (sumPricePerType.hasOwnProperty(type)) {
+      sumPricePerType[type] = Number((sumPricePerType[type] + price).toFixed(2));
+    } else {
+      sumPricePerType[type] = price;
+    }
   }
+  console.log(itemNames);
+  console.log(`-----------------`);
+  console.log(`Unique Item Types`);
+  for (let typesUnique of itemTypes) {
+    console.log(typesUnique);
+  }
+  console.log(`-----------------`);
+  console.log(`Total Sum for Each Type`);
+  for (let sumPerType in sumPricePerType) {
+    console.log(`${sumPerType}: ${sumPricePerType[sumPerType]}`);
+    totalSum = (totalSum + Number(sumPricePerType[sumPerType]));
+  }
+  console.log(`-----------------`);
+  console.log(`Total Sum for Items Purchased`);
+  console.log(totalSum);
+  console.log(`-----------------`);
+  let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'});
+  console.log(formatter.format(totalSum));
 
   // CODE IN THE OPEN LINES ABOVE
 }
